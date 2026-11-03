@@ -606,13 +606,6 @@ textarea {
   word-break: break-word;
 }
 
-.guest-empty {
-  padding: 12px;
-  text-align: center;
-  color: var(--text-muted);
-  border: 1px dashed var(--panel-border);
-}
-
 /* ========== 오른쪽 탭 ========== */
 .mh-tabs {
   padding-top: 16px;

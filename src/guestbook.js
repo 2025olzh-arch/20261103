@@ -2,6 +2,20 @@ import { load, save } from './storage.js'
 
 const STORAGE_KEY = 'guestbook'
 
+// 미리 남겨진 방명록 (항상 표시되며 삭제할 수 없음, 최신 글이 위)
+const SAMPLE_ENTRIES = [
+  {
+    name: '김카와',
+    message: '재연쌤 미니홈피 너무 귀엽다 ㅋㅋ 다음 프로젝트도 같이 해요! 일촌 신청합니다~ ^^',
+    time: new Date('2026-11-02T22:17').getTime(),
+  },
+  {
+    name: '김치이',
+    message: '오랜만에 파도타기 하다 들렀어~ 대학원 생활 화이팅!! ♡',
+    time: new Date('2026-10-27T21:05').getTime(),
+  },
+]
+
 function formatDate(time) {
   const d = new Date(time)
   const pad = (n) => String(n).padStart(2, '0')
@@ -19,15 +33,13 @@ export function initGuestbook() {
   function render() {
     list.replaceChildren()
 
-    if (entries.length === 0) {
-      const empty = document.createElement('li')
-      empty.className = 'guest-empty'
-      empty.textContent = '아직 방명록이 없어요. 첫 글을 남겨 주세요!'
-      list.append(empty)
-      return
-    }
+    // 방문자가 쓴 글(삭제 가능) 아래에 미리 남겨진 글을 이어서 표시
+    const all = [
+      ...entries.map((entry, index) => ({ ...entry, index })),
+      ...SAMPLE_ENTRIES,
+    ]
 
-    entries.forEach((entry, index) => {
+    all.forEach((entry, position) => {
       const item = document.createElement('li')
       item.className = 'guest-item'
 
@@ -35,23 +47,27 @@ export function initGuestbook() {
       head.className = 'guest-head'
 
       const meta = document.createElement('span')
-      meta.textContent = `No.${entries.length - index} ${entry.name}`
+      meta.textContent = `No.${all.length - position} ${entry.name}`
 
       const right = document.createElement('span')
       right.className = 'guest-head-right'
       const date = document.createElement('time')
       date.textContent = formatDate(entry.time)
-      const del = document.createElement('button')
-      del.type = 'button'
-      del.className = 'guest-delete'
-      del.textContent = '삭제'
-      del.setAttribute('aria-label', `${entry.name}님의 방명록 삭제`)
-      del.addEventListener('click', () => {
-        entries.splice(index, 1)
-        save(STORAGE_KEY, entries)
-        render()
-      })
-      right.append(date, del)
+      right.append(date)
+
+      if (entry.index !== undefined) {
+        const del = document.createElement('button')
+        del.type = 'button'
+        del.className = 'guest-delete'
+        del.textContent = '삭제'
+        del.setAttribute('aria-label', `${entry.name}님의 방명록 삭제`)
+        del.addEventListener('click', () => {
+          entries.splice(entry.index, 1)
+          save(STORAGE_KEY, entries)
+          render()
+        })
+        right.append(del)
+      }
 
       head.append(meta, right)
 
