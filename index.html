@@ -1,13 +1,249 @@
 <!doctype html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>20261103</title>
+    <title>이재연의 미니홈피 | AI융합교육 자기소개</title>
+    <meta name="description" content="AI융합교육학과 대학원생이자 중학교 가정 교사인 이재연의 미니홈피 스타일 자기소개 페이지입니다. 교육 배경, 관심 연구 분야, AI 활용 수업 사례를 소개합니다." />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="이재연의 미니홈피" />
+    <meta property="og:description" content="가정 수업에 AI를 더하고 싶은 중학교 가정 교사, 이재연의 미니홈피입니다." />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   </head>
   <body>
-    <div id="app"></div>
+    <a class="skip-link" href="#content">본문으로 건너뛰기</a>
+
+    <div class="minihome">
+      <!-- 상단 바: 방문자 수 / 제목 / BGM -->
+      <header class="mh-top">
+        <p class="visit-counter">
+          TODAY <strong class="count-today">0</strong>
+          <span aria-hidden="true">|</span>
+          TOTAL <strong class="count-total">0</strong>
+        </p>
+        <h1 class="mh-title">이재연의 미니홈피 <span aria-hidden="true">♡</span></h1>
+        <p class="bgm">
+          <span class="bgm-note" aria-hidden="true">♪</span>
+          <span class="bgm-label">BGM</span>
+          <span class="bgm-track">프리스타일 - Y</span>
+        </p>
+      </header>
+
+      <div class="mh-body">
+        <!-- 왼쪽: 프로필 패널 -->
+        <aside class="mh-side panel" aria-label="프로필">
+          <div class="side-photo">
+            <!-- 프로필 사진: src/assets/profile.jpg를 준비한 뒤 아래 div를 <img>로 바꾸세요 -->
+            <div class="profile-placeholder" role="img" aria-label="이재연 프로필 사진">이</div>
+          </div>
+
+          <div class="mood">
+            <label for="mood-select">오늘의 기분</label>
+            <select id="mood-select">
+              <option value="happy">😊 행복</option>
+              <option value="study">📚 공부 중</option>
+              <option value="excited">✨ 설렘</option>
+              <option value="tired">😪 피곤</option>
+              <option value="coffee">☕ 커피 필요</option>
+            </select>
+          </div>
+
+          <p class="side-intro">
+            가정 수업에 AI를 더하고 싶은<br />
+            중학교 가정 교사입니다.
+          </p>
+
+          <dl class="side-info">
+            <div>
+              <dt>이름</dt>
+              <dd>이재연</dd>
+            </div>
+            <div>
+              <dt>소속</dt>
+              <dd>서울대학교 교육대학원<br />AI융합교육학과 6기</dd>
+            </div>
+            <div>
+              <dt>교과</dt>
+              <dd>중학교 가정</dd>
+            </div>
+          </dl>
+
+          <button class="btn-mini skin-toggle" type="button">🎨 스킨 변경</button>
+        </aside>
+
+        <!-- 가운데: 본문 -->
+        <main class="mh-main panel" id="content" tabindex="-1">
+          <!-- 홈 -->
+          <section class="tab-panel" id="panel-home" role="tabpanel" aria-labelledby="tab-home">
+            <h2 class="panel-title">Updated news</h2>
+            <ul class="news-list">
+              <li><span class="news-tag">다이어리</span><a href="#diary">대학원에서 이루고 싶은 것</a></li>
+              <li><span class="news-tag">사진첩</span><a href="#photo">AI 식단 코치와 한 끼 식단 짜기 수업</a></li>
+              <li><span class="news-tag">연구</span><a href="#research">관심 연구 분야를 정리했어요</a></li>
+            </ul>
+
+            <h2 class="panel-title">미니룸</h2>
+            <div class="miniroom">
+              <p>
+                중학교에서 가정 교과를 가르치고 있습니다. 가정 수업은 식생활, 의생활, 주생활, 소비 생활처럼 학생들의 일상과 맞닿아 있어서,
+                배운 것을 자신의 삶에 바로 적용해 보는 경험이 무엇보다 중요하다고 생각합니다.
+              </p>
+              <p>
+                요즘 학생들은 식단 앱, 쇼핑 추천, 생성형 AI처럼 이미 AI와 함께 생활하고 있습니다. 그래서 가정 수업에서도 AI를 올바르게 이해하고
+                비판적으로 활용하는 힘, 즉 AI 리터러시를 함께 길러야 한다고 느꼈습니다.
+              </p>
+              <p>
+                그래서 AI융합교육을 체계적으로 공부하기 위해 대학원에 진학했습니다. 기술 자체보다 <strong>교육적으로 의미 있는 AI 활용</strong>이 무엇인지 탐구하고자 합니다.
+              </p>
+            </div>
+          </section>
+
+          <!-- 프로필: 교육 배경 -->
+          <section class="tab-panel" id="panel-profile" role="tabpanel" aria-labelledby="tab-profile" hidden>
+            <h2 class="panel-title">교육 배경</h2>
+            <ol class="history">
+              <li>
+                <span class="history-date">2026 – 현재</span>
+                <div>
+                  <strong>서울대학교 교육대학원 AI융합교육학과 6기</strong>
+                  <p>석사과정 재학</p>
+                </div>
+              </li>
+              <li>
+                <span class="history-date">2026 – 현재</span>
+                <div>
+                  <strong>서일중학교 가정 교사</strong>
+                  <p>기술·가정 교과 중 가정 영역 담당</p>
+                </div>
+              </li>
+            </ol>
+          </section>
+
+          <!-- 연구: 관심 연구 분야 + 도구 -->
+          <section class="tab-panel" id="panel-research" role="tabpanel" aria-labelledby="tab-research" hidden>
+            <h2 class="panel-title">관심 연구 분야</h2>
+            <ul class="research-list">
+              <li>
+                <strong>AI 리터러시 교육</strong>
+                <p>학생들이 AI의 원리와 한계를 이해하고 비판적으로 활용하는 역량을 기르는 교육 방법</p>
+              </li>
+              <li>
+                <strong>가정 교과 AI 융합 수업</strong>
+                <p>식생활, 의생활, 소비 생활 등 가정 교과의 생활 문제를 AI로 탐구하고 해결하는 수업 설계</p>
+              </li>
+              <li>
+                <strong>생성형 AI 활용 수업</strong>
+                <p>생성형 AI를 학습 도구로 활용한 수업 설계와 그 효과</p>
+              </li>
+              <li>
+                <strong>AI 윤리와 소비자 교육</strong>
+                <p>추천 알고리즘, 개인정보, 맞춤형 광고 등 AI 시대 소비자가 알아야 할 윤리적 쟁점</p>
+              </li>
+            </ul>
+
+            <h2 class="panel-title">활용 가능한 AI·에듀테크 도구</h2>
+            <dl class="tool-list">
+              <div>
+                <dt>생성형 AI</dt>
+                <dd><ul class="tags"><li>ChatGPT</li><li>Claude</li><li>Gemini</li></ul></dd>
+              </div>
+              <div>
+                <dt>AI 교육 도구</dt>
+                <dd><ul class="tags"><li>Teachable Machine</li><li>엔트리</li><li>Quick, Draw!</li></ul></dd>
+              </div>
+              <div>
+                <dt>프로그래밍</dt>
+                <dd><ul class="tags"><li>Python</li><li>HTML · CSS · JavaScript</li></ul></dd>
+              </div>
+              <div>
+                <dt>에듀테크</dt>
+                <dd><ul class="tags"><li>패들렛</li><li>구글 클래스룸</li><li>띵커벨</li></ul></dd>
+              </div>
+            </dl>
+          </section>
+
+          <!-- 사진첩: 수업·프로젝트 사례 -->
+          <section class="tab-panel" id="panel-photo" role="tabpanel" aria-labelledby="tab-photo" hidden>
+            <h2 class="panel-title">사진첩 · 수업 사례</h2>
+            <div class="album">
+              <article class="album-item">
+                <div class="album-thumb thumb-1" aria-hidden="true">🍱</div>
+                <p class="album-meta">중학교 · 가정 (식생활)</p>
+                <h3>AI 식단 코치와 한 끼 식단 짜기</h3>
+                <p>생성형 AI에게 내 식단을 평가받고, 그 답을 영양 기준과 비교해 검증하며 균형 잡힌 식단을 짜는 수업</p>
+                <ul class="tags"><li>생성형 AI</li><li>식생활</li></ul>
+              </article>
+              <article class="album-item">
+                <div class="album-thumb thumb-2" aria-hidden="true">🛒</div>
+                <p class="album-meta">중학교 · 가정 (소비 생활)</p>
+                <h3>추천 알고리즘과 합리적 소비</h3>
+                <p>쇼핑앱 추천의 원리를 알아보고, 추천과 광고에 휘둘리지 않는 나만의 소비 계획을 세우는 수업</p>
+                <ul class="tags"><li>AI 리터러시</li><li>소비자 교육</li></ul>
+              </article>
+              <article class="album-item">
+                <div class="album-thumb thumb-3" aria-hidden="true">💻</div>
+                <p class="album-meta">대학원 과제</p>
+                <h3>자기소개 웹페이지</h3>
+                <p>Vite와 Vanilla JavaScript로 직접 만들고 Netlify로 배포한 이 미니홈피</p>
+                <ul class="tags"><li>Vite</li><li>JavaScript</li></ul>
+              </article>
+            </div>
+          </section>
+
+          <!-- 다이어리: 앞으로의 목표 -->
+          <section class="tab-panel" id="panel-diary" role="tabpanel" aria-labelledby="tab-diary" hidden>
+            <h2 class="panel-title">다이어리 · 앞으로의 목표</h2>
+            <article class="diary-entry">
+              <p class="diary-date">2026.11.03 <span>🌤 맑음</span></p>
+              <h3>대학원에서</h3>
+              <p>AI융합교육의 이론적 기반을 다지고, 가정 교과에서 AI 융합 수업이 학생들의 생활 문제 해결력에 어떤 도움이 되는지 연구하고 싶다.</p>
+            </article>
+            <article class="diary-entry">
+              <p class="diary-date">2026.11.03 <span>🌙 밤</span></p>
+              <h3>학교 현장에서</h3>
+              <p>연구 결과를 바탕으로 동료 가정 선생님들이 바로 쓸 수 있는 AI 융합 수업 자료를 만들고 나누고 싶다.</p>
+            </article>
+          </section>
+
+          <!-- 방명록 -->
+          <section class="tab-panel" id="panel-guest" role="tabpanel" aria-labelledby="tab-guest" hidden>
+            <h2 class="panel-title">방명록</h2>
+            <form class="guest-form">
+              <div class="guest-row">
+                <label for="guest-name">이름</label>
+                <input id="guest-name" name="name" type="text" maxlength="20" required />
+              </div>
+              <div class="guest-row">
+                <label for="guest-message">내용</label>
+                <textarea id="guest-message" name="message" rows="3" maxlength="300" required></textarea>
+              </div>
+              <div class="guest-actions">
+                <p class="guest-note">※ 방명록은 지금 사용 중인 브라우저에만 저장됩니다.</p>
+                <button class="btn-mini" type="submit">확인</button>
+              </div>
+            </form>
+            <ul class="guest-list" aria-live="polite"></ul>
+          </section>
+        </main>
+
+        <!-- 오른쪽: 메뉴 탭 -->
+        <nav class="mh-tabs" aria-label="미니홈피 메뉴">
+          <div role="tablist" aria-orientation="vertical">
+            <button class="tab" id="tab-home" role="tab" type="button" aria-controls="panel-home" aria-selected="true" data-hash="home">홈</button>
+            <button class="tab" id="tab-profile" role="tab" type="button" aria-controls="panel-profile" aria-selected="false" tabindex="-1" data-hash="profile">프로필</button>
+            <button class="tab" id="tab-research" role="tab" type="button" aria-controls="panel-research" aria-selected="false" tabindex="-1" data-hash="research">연구</button>
+            <button class="tab" id="tab-photo" role="tab" type="button" aria-controls="panel-photo" aria-selected="false" tabindex="-1" data-hash="photo">사진첩</button>
+            <button class="tab" id="tab-diary" role="tab" type="button" aria-controls="panel-diary" aria-selected="false" tabindex="-1" data-hash="diary">다이어리</button>
+            <button class="tab" id="tab-guest" role="tab" type="button" aria-controls="panel-guest" aria-selected="false" tabindex="-1" data-hash="guest">방명록</button>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <p>&copy; <span class="current-year">2026</span> 이재연</p>
+    </footer>
+
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
