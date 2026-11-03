@@ -41,7 +41,7 @@
    ├─ style.css          # 전체 스타일, 스킨 색상 변수
    ├─ storage.js         # localStorage 안전하게 읽기/쓰기
    ├─ tabs.js            # 오른쪽 탭 전환 (키보드 방향키, 주소 #해시 연동)
-   ├─ visitor.js         # TODAY/TOTAL 방문자 수 (이 브라우저 기준)
+   ├─ visitor.js         # TODAY 방문자 수(이 브라우저 기준), TOTAL은 1,004 고정
    ├─ skin.js            # 스킨 변경 (파랑 → 분홍 → 초록)
    ├─ sidebar.js         # 오늘의 기분 저장
    ├─ guestbook.js       # 방명록 작성/삭제
